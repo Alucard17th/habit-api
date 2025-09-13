@@ -68,6 +68,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/me', [ProfileController::class, 'show']);                 // you already have this; keep for completeness
     Route::put('/me', [ProfileController::class, 'update']);               // update name/email
     Route::put('/me/password', [ProfileController::class, 'updatePassword']); // change password
+    Route::post('/me/verify-license', [ProfileController::class, 'verifyLicense']); // change password
 
     // Coach
     Route::get('/coach/suggestions', [CoachController::class, 'index']);
